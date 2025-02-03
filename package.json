@@ -1,0 +1,19 @@
+{
+  "name": "@chess/repository",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "infrastructure",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm --workspace=@chess/app run start",
+    "build": "npm --workspace=@chess/app run build",
+    "predeploy": "docker build -t chess-app -f Dockerfile.Toolkit . & npm run build & wait",
+    "deploy": "docker run --rm -it -v $(pwd):/app -e RC_FILE_LOCATION=.chess.rc.yaml chess-app bash -c 'npm --workspace=@chess/infrastructure run deploy -- \"$@\"' -- --",
+    "cancel": "docker run --rm -it -v $(pwd):/app -e RC_FILE_LOCATION=.chess.rc.yaml chess-app bash -c 'npm --workspace=@chess/infrastructure run cancel -- \"$@\"' -- --"
+  }
+}

@@ -1,0 +1,15 @@
+pulumi:
+  profiles:
+    - name: "MY-PULUMI-PROFILE-NAME (For identification)"
+      access_token: "pul-xxxxxxxxxx"
+
+aws:
+  region: "us-west-2"
+  profile: "MY-AWS-PROFILE-NAME (For identification)"
+  credentials:
+    aws_access_key_id: "AKIAxxxxxxxxxxxx"
+    aws_secret_access_key: "WJxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+cloudflare: 
+  api_token: "CLOUDFLARE_API_TOKEN"
+  zone_id: "CLOUDFLARE_ZONE_ID"

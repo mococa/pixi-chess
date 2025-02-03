@@ -1,0 +1,7 @@
+name: Chess
+runtime: nodejs
+description: chess pulumi program
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

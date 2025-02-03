@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src/index.ts", "./ui/*.ts", "./core/*.ts"],
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "moduleResolution": "Node",
+    "jsx": "preserve"
+  }
+}

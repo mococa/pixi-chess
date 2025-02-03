@@ -1,0 +1,31 @@
+# Use a minimal Node.js base image (alpine for small size)
+FROM node:20-alpine AS base
+
+# Install dependencies: bash, curl, unzip, python3, yq, and AWS CLI
+RUN apk add --no-cache \
+    bash \
+    curl \
+    unzip \
+    python3 \
+    py3-pip \
+    yq \
+    && apk add aws-cli --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/
+
+# Install Pulumi (download the latest version)
+RUN curl -fsSL https://get.pulumi.com | sh && \
+    mv ~/.pulumi/bin/* /usr/local/bin/
+
+# Download and install Pulumi plugins
+RUN pulumi plugin install resource aws & \
+    pulumi plugin install resource cloudflare & \
+    wait
+
+WORKDIR /app
+
+# Copy the entrypoint script
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
+CMD ["bash"]

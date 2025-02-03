@@ -1,0 +1,11 @@
+{
+  "name": "@chess/game-engine",
+  "private": true,
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@chess/maths": "1.0.0",
+    "pixi.js": "^8.6.6"
+  }
+}
