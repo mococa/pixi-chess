@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "moduleResolution": "Node",
+    "jsx": "preserve"
+  }
+}

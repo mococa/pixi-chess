@@ -1,0 +1,7 @@
+{
+  "name": "@chess/theme",
+  "private": true,
+  "version": "1.0.0",
+  "main": "./src/tailwind.config.ts",
+  "license": "MIT"
+}

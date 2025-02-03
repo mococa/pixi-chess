@@ -11,7 +11,7 @@ import { Config } from "tailwindcss";
 const workspaces: string[] = [];
 const content = workspaces.map((workspace) => join(dirname(require.resolve(workspace)), "./**/*.tsx"));
 
-module.exports = {
+export default {
   content,
   theme: {
     extend: {},
