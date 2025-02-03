@@ -9,6 +9,7 @@
       "version": "0.0.1",
       "devDependencies": {
         "@chess/game-engine": "*",
+        "@chess/theme": "*",
         "nullstack": "~0.20.0",
         "postcss-loader": "^7.0.1",
         "tailwindcss": "^3.0.0",
@@ -36,6 +37,10 @@
       "name": "@chess/maths",
       "version": "1.0.0",
     },
+    "packages/theme": {
+      "name": "@chess/theme",
+      "version": "1.0.0",
+    },
   },
   "packages": {
     "@alloc/quick-lru": ["@alloc/quick-lru@5.2.0", "", {}, "sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw=="],
@@ -51,6 +56,8 @@
     "@chess/infrastructure": ["@chess/infrastructure@workspace:infrastructure"],
 
     "@chess/maths": ["@chess/maths@workspace:packages/maths"],
+
+    "@chess/theme": ["@chess/theme@workspace:packages/theme"],
 
     "@eslint/eslintrc": ["@eslint/eslintrc@1.4.1", "", { "dependencies": { "ajv": "^6.12.4", "debug": "^4.3.2", "espree": "^9.4.0", "globals": "^13.19.0", "ignore": "^5.2.0", "import-fresh": "^3.2.1", "js-yaml": "^4.1.0", "minimatch": "^3.1.2", "strip-json-comments": "^3.1.1" } }, "sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA=="],
 
