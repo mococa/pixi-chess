@@ -56,8 +56,10 @@ If you want to host it yourself, you don't need to install the AWS CLI and Pulum
 Cloudflare and AWS environment variables: use the `Dockerfile.Toolkit` to run the infrastructure toolkit
 container.
 
-To deploy the infrastructure, fill a `.chess.rc.yaml` file based on the `.chess.rc.example.yaml`, and finally
-run the following command:
+To deploy the infrastructure, fill a `.chess.rc.yaml` file based on the `.chess.rc.example.yaml`, because
+honestly I simply don't like .env files, they get messy really quick on larger projects.
+
+Then, finally run the following command:
 
 ```bash
 bun run deploy
